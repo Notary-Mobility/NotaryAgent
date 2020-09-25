@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    tools:context=".paymentclasses.WalletActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:id="@+id/mainlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/toobarcolor"
+
+                android:minHeight="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/CustomTheme" />
+
+            <RelativeLayout
+                android:id="@+id/exit_app_but"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_backwhite" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/mywallet"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/medium" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/addmoneylay"
+            android:layout_below="@+id/mainlay"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_wallet" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/large"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/currentbal"
+                        android:textColor="@color/buttoncol"
+                        android:textSize="@dimen/medium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/totalamount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:text="$0.00"
+                        android:textColor="@color/buttoncol"
+                        android:textSize="@dimen/medium"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/black"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/transection_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/border_bluerounddrab"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/seetransection"
+                        android:textColor="@color/buttoncol"
+                        android:textSize="@dimen/large"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/withdraw_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/border_bluerounddrab"
+                        android:gravity="center"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:text="@string/withdraw"
+                        android:textColor="@color/buttoncol"
+                        android:textSize="@dimen/large"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="@string/addmoney"
+                        android:textColor="@color/buttoncol"
+                        android:textSize="@dimen/large"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/amount_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/border_grey_rec"
+                        android:hint="@string/entermoney"
+                        android:inputType="number"
+                        android:padding="10dp"
+                        android:textSize="@dimen/small" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/fifty_but"
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/border_grey_rec"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="$50"
+
+                            android:textColor="@color/darkgrey" />
+
+                        <TextView
+                            android:id="@+id/hundred_but"
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/border_grey_rec"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="$100"
+
+                            android:textColor="@color/darkgrey" />
+
+                        <TextView
+                            android:id="@+id/onefifty_but"
+                            android:layout_width="80dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/border_grey_rec"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="$150"
+                            android:textColor="@color/darkgrey" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="40dp"
+                    android:visibility="gone"
+                    android:textSize="@dimen/large"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/noearning"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/ride_sts_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+                <main.com.notaryagent.constant.ExpandableHeightListView
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="5dp"
+                    android:divider="@null"
+                    android:id="@+id/mycompletesign"
+                    android:layout_height="wrap_content"></main.com.notaryagent.constant.ExpandableHeightListView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/addmoneylay"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/mysigning"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@color/toobarcolor"
+                android:gravity="center"
+                android:textAllCaps="true"
+                android:text="@string/mysigning"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium" />
+
+            <TextView
+                android:id="@+id/nextpaycheck"
+                android:layout_width="0dp"
+                android:textAllCaps="true"
+                android:layout_height="40dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@color/toobarcolor"
+                android:gravity="center"
+                android:text="@string/nextpaycheck"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium" />
+
+            <TextView
+                android:id="@+id/addmoney"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@color/toobarcolor"
+                android:gravity="center"
+                android:text="@string/addmoney"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/addcards"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@color/toobarcolor"
+                android:gravity="center"
+                android:text="@string/addcard"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/prgressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

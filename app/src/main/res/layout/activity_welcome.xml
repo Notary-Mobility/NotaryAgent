@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkblue_new"
+    tools:context=".activity.WelcomeAct">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ImageView
+    android:id="@+id/ddddddd"
+    android:layout_marginTop="110dp"
+    android:layout_centerHorizontal="true"
+    android:src="@drawable/logo"
+    android:layout_width="250dp"
+    android:layout_height="190dp" />
+
+<LinearLayout
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:text="@string/agent"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/ddddddd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="35dp"
+        android:weightSum="2"
+        android:gravity="center_horizontal"
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginRight="7dp"
+            android:id="@+id/loginbut"
+            android:textColor="@color/white"
+            android:text="@string/login"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:textSize="@dimen/medium"
+            android:background="@drawable/border_filled_blue_round_white"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+        <Button
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/signupbut"
+            android:textColor="@color/white"
+            android:text="@string/signup"
+            android:textSize="@dimen/medium"
+            android:layout_weight="1"
+            android:background="@drawable/border_filled_blue_round_white"
+            android:layout_width="0dp"
+            android:layout_height="50dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

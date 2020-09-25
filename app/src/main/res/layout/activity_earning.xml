@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="main.com.notaryagent.tabactivity.EarningActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_above="@+id/ddd"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/dddd"
+                app:cardCornerRadius="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/today"
+                        android:textSize="@dimen/medium"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/today_trip_count"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:text="No Trip"
+                            android:textSize="@dimen/small" />
+
+                        <TextView
+                            android:id="@+id/todayearning"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="$00.00"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/extralarge"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/lasttripdate"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.5"
+                            android:gravity="bottom"
+                            android:text=""
+                            android:textSize="@dimen/small" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.5"
+                            android:gravity="right"
+                            android:text="@string/tripamount"
+                            android:textSize="@dimen/large"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <main.com.notaryagent.constant.ExpandableHeightListView
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:divider="@null"
+                android:layout_below="@+id/dddd"
+                android:id="@+id/mycompletesign"
+                android:layout_height="wrap_content"></main.com.notaryagent.constant.ExpandableHeightListView>
+
+
+            <TextView
+                android:id="@+id/nodata"
+                android:visibility="gone"
+                android:textSize="@dimen/large"
+                android:textColor="@color/black"
+                android:text="@string/nodatafound"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+<LinearLayout
+    android:id="@+id/ddd"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/black"
+        ></View>
+    <RelativeLayout
+        android:padding="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="@dimen/large"
+            android:textColor="@color/black"
+            android:text="@string/thisweek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/weekamount"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/large"
+            android:layout_alignParentRight="true"
+            android:text="$0.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/prgressbar"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

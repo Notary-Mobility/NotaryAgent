@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="3dp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:id="@+id/reqcount"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="17dp"
+            android:background="@drawable/ic_circular_badge"
+            android:gravity="center"
+            android:padding="1dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:textColor="@drawable/tab_text_sel_col_dra"
+        android:id="@+id/tabtext"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp" />
+
+</LinearLayout>

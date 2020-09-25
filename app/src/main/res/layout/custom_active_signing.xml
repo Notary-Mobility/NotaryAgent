@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="30dp">
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp">
+    <View
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:background="@color/black"
+        android:layout_width="1dp"
+        android:layout_height="20dp"></View>
+
+    <TextView
+        android:padding="2dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:id="@+id/active_ride_date"
+        android:textColor="@color/black"
+        android:textSize="@dimen/small"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+</android.support.constraint.ConstraintLayout>

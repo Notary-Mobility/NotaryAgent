@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/white"
+
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/CustomTheme" />
+
+
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/appicon" />
+    </RelativeLayout>
+    <Switch
+        android:visibility="gone"
+        android:showText="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/switch_driver_sts1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:paddingLeft="10dp"
+        android:text=""
+        android:textOff="Offline"
+        android:textOn="Online"
+        android:thumb="@drawable/switch_thumb_two"
+        android:track="@drawable/switch_unchecked" />
+    <ToggleButton
+        android:visibility="gone"
+        android:showText="true"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/toggle_driver_sts"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:checked="false"
+        android:paddingLeft="10dp"
+
+        android:background="@drawable/toggleselector"
+        android:textOff=""
+        android:textOn=""
+        />
+
+</RelativeLayout>
+

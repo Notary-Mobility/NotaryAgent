@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="main.com.notaryagent">
+
+    <permission
+        android:name="main.com.notaryagent.googlemapsv2.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <!-- <uses-permission android:name="info.androidhive.googlemapsv2.permission.MAPS_RECEIVE" /> -->
+    <uses-permission android:name="main.com.notaryagent.googlemapsv2.permission.MAPS_RECEIVE" />
+
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/appicon"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.MainActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SeeMyStripeDashBoardAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".paymentclasses.StripeExpressAcountAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".paymentclasses.MyaddedCards"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".paymentclasses.MyCardsPayment"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".paymentclasses.WalletActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".paymentclasses.UpdateCard"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".paymentclasses.AddCreditCardAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".paymentclasses.TransectionHistory"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.EmergencyActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tabactivity.MyActiveSignings"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WithdrawReqAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ChatingAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:launchMode="singleTask"
+            android:name=".activity.TrackRideAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TripHistoryAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SignupActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.LoginAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ForgotPassword"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.WelcomeAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tabactivity.HomeActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tabactivity.EarningActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tabactivity.ProfileActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AboutUsAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MySignings"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.PrivacyPolicyAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AddBankAccountAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ContactUsAct"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".draweractivity.BaseActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tabactivity.StreatPickupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tabactivity.MainTabActivity"
+            android:label=""
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.MyFirebaseMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".service.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.BackButtonService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.BackButtonHomeService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/googlekey" />
+
+        <activity android:name=".activity.WithdrawActivity" />
+        <activity
+            android:name=".activity.InviteEarnAct"
+            android:label="" />
+        <activity
+            android:name=".activity.AgentDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.AgentSignup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.TermsConditionsAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.DemoAct"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name=".service.TrackingService"
+            android:enabled="true" />
+
+        <receiver android:name=".constant.MyReceiver" />
+
+        <activity
+            android:name=".tabactivity.SigningActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".tabactivity.ActiveSigningAct" />
+        <activity android:name=".activity.MyNextPayoutAct" />
+        <activity android:name=".activity.StripeActivity"></activity>
+    </application>
+
+</manifest>

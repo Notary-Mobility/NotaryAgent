@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="main.com.notaryagent.activity.AgentDetails">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/mainlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/toobarcolor"
+
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/CustomTheme" />
+
+
+
+        <RelativeLayout
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/exit_app_but"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_backwhite" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/titletext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="60dp"
+            android:text="@string/agentdetail"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium" />
+
+
+
+    </RelativeLayout>
+
+<ScrollView
+    android:layout_below="@+id/mainlay"
+    android:layout_width="match_parent"
+    android:fillViewport="true"
+    android:layout_height="wrap_content">
+    <LinearLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/image_lay"
+                android:layout_width="110dp"
+                android:layout_height="100dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_user_prof" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/edit_ic" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border_grey_rec"
+                    android:hint="@string/firstname"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="35"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:padding="7dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkgrey"
+                    android:textSize="@dimen/medium" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border_grey_rec"
+                    android:hint="@string/lastname"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="35"
+                    android:padding="7dp"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkgrey"
+                    android:textSize="@dimen/medium" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/mobile_et"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/border_grey_rec"
+                android:hint="@string/phone"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="35"
+                android:padding="7dp"
+                android:enabled="false"
+                android:editable="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/medium" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="7dp"
+
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/sellang"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="35"
+                android:padding="7dp"
+                android:text="@string/selectlang"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/medium" />
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/logo" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border_grey_rec"
+                    android:hint="@string/email"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="35"
+                    android:padding="7dp"
+                    android:enabled="false"
+                    android:editable="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkgrey"
+                    android:textSize="@dimen/medium" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <EditText
+                    android:id="@+id/company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border_grey_rec"
+                    android:hint="@string/companyname"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="35"
+                    android:padding="7dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkgrey"
+                    android:textSize="@dimen/medium" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/doyouwork"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium" />
+
+        <RadioGroup
+            android:id="@+id/workwithnotaryrdgrp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/firsttimeconnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/noiamfirst"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/iamdirectpartenr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yesiampartner"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/conthraggretr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yesconagg"
+                android:textColor="@color/black" />
+
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="7dp"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/state_licenced"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/border_grey_rec"
+                    android:hint="@string/statelicencenumber"
+                    android:imeOptions="actionNext"
+                    android:maxLength="35"
+                    android:padding="7dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/darkgrey"
+                    android:textSize="@dimen/medium" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:id="@+id/country_spn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:id="@+id/state_spn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <Spinner
+                android:id="@+id/city_spn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/pp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/numberofyear"
+                android:text="@string/currentlymobilenotary"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium" />
+
+            <RadioGroup
+                android:id="@+id/currentlynotary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/yesnotary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yes"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/nonotary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/no"
+                    android:textColor="@color/black" />
+
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/numberofyear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/border_grey_rec"
+                android:hint="@string/numberofyear"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:maxLength="35"
+                android:paddingBottom="7dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="7dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/small"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/ffff"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nnacertified"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium" />
+            <RadioGroup
+
+                android:layout_below="@+id/ffff"
+                android:id="@+id/nnacertified"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/nnacertifiedyes"
+                    android:textColor="@color/black"
+                    android:text="@string/yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/nnacertifiedno"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"
+                    android:text="@string/no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/fffff"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eandoins"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium" />
+            <RadioGroup
+
+                android:layout_below="@+id/fffff"
+                android:id="@+id/eoinsurance"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/eoinsuranceyes"
+                    android:textColor="@color/black"
+                    android:text="@string/yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/eoinsuranceno"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"
+                    android:text="@string/no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/ffffff"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/liprins"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium" />
+            <RadioGroup
+
+                android:layout_below="@+id/ffffff"
+                android:id="@+id/prodliclay"
+                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/prodlicyes"
+                    android:textColor="@color/black"
+                    android:text="@string/yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/prodlicno"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/black"
+                    android:text="@string/no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/ifapproved"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium" />
+
+        <RadioGroup
+            android:layout_marginBottom="15dp"
+            android:id="@+id/startimyesno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/startimeyes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yes"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/startimeno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/no"
+                android:textColor="@color/black" />
+
+        </RadioGroup>
+
+
+
+        <Button
+android:visibility="gone"
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/buttoncol"
+            android:text="@string/sendapp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/medium" />
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainlay"
+        android:orientation="vertical">
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/driver_licens_lay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="35"
+                android:padding="7dp"
+                android:text="@string/driverlicens"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/medium" />
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/lic_img_show"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_toLeftOf="@+id/lic_img"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/lic_img"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_attachment" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/driver_car_lay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="35"
+                android:padding="7dp"
+                android:text="@string/carimage"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/medium" />
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/car_img_show"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_toLeftOf="@+id/car_img"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/car_img"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_attachment" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/driver_car_ispe_lay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="35"
+                android:padding="7dp"
+                android:text="@string/license"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/medium" />
+
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/car_insp_show"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_toLeftOf="@+id/car_insp_img"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/car_insp_img"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_attachment" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:visibility="visible"
+                android:id="@+id/car_model_et"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:hint="@string/carmodel"
+                android:imeOptions="actionNext"
+                android:maxLength="35"
+                android:enabled="false"
+                android:inputType="none"
+                android:padding="7dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/medium" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:dropDownSelector="@null"
+                android:id="@+id/servicetype"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:visibility="gone"
+                android:dropDownSelector="@null"
+                android:id="@+id/carmanuyear"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/manufac_year"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="35"
+                android:padding="7dp"
+                android:text="@string/yearmanu"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/medium" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_calendar" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:visibility="gone"
+                android:dropDownSelector="@null"
+                android:id="@+id/carcolspn"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></Spinner>
+
+            <TextView
+                android:visibility="visible"
+                android:id="@+id/car_color"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="35"
+                android:padding="7dp"
+                android:text="@string/yellowcol"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/medium" />
+
+            <TextView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="13dp"
+                android:background="@color/yellow" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/car_registrationnum"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:hint="@string/carregis"
+                android:imeOptions="actionNext"
+                android:maxLength="35"
+                android:padding="7dp"
+                android:enabled="false"
+                android:inputType="none"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/medium" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/insurance_copy"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_marginTop="7dp"
+            android:background="@drawable/border_grey_rec"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="35"
+                android:padding="7dp"
+                android:text="@string/insurance"
+                android:textColor="@color/black"
+                android:textColorHint="@color/darkgrey"
+                android:textSize="@dimen/medium" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:id="@+id/insu_img_show"
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:layout_toLeftOf="@+id/insu_img"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/insu_img"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_attachment" />
+
+        </RelativeLayout>
+
+        <Button
+android:visibility="gone"
+            android:id="@+id/save_profile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/buttoncol"
+            android:text="@string/update"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

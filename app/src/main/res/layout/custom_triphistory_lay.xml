@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/car"
+            android:src="@drawable/ic_taxi"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:textSize="@dimen/medium"
+                android:text="Yesterday 06:55 pm"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="@dimen/small"
+                android:text="Auto.CRN 1234567890 "
+                android:textColor="@color/toolheadercol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/car"
+        android:src="@drawable/ic_taxi"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+
+</RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

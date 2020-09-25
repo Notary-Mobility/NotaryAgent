@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "88739773085",
+    "firebase_url": "https://notaryuser-dbb14.firebaseio.com",
+    "project_id": "notaryuser-dbb14",
+    "storage_bucket": "notaryuser-dbb14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88739773085:android:3061732969c4dcd0",
+        "android_client_info": {
+          "package_name": "main.com.notaryagent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88739773085-ou4v9d8jdlm27mki0jcf40njgiudaglp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDJJ8R7fGwu_UEq51fD9CWwMHqSlDTUqY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

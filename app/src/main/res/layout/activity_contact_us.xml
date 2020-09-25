@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.ContactUsAct">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/mainlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/toobarcolor"
+
+                android:minHeight="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/CustomTheme" />
+
+
+
+            <RelativeLayout
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:id="@+id/exit_app_but"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_backwhite" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/titletext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:text="@string/contactus"
+                android:textColor="@color/white"
+                android:textSize="@dimen/medium" />
+
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_above="@+id/submitbut"
+            android:layout_below="@+id/mainlay"
+            android:fillViewport="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_marginTop="15dp"
+                    android:padding="7dp"
+                    android:textColor="@color/black"
+                    android:hint="@string/name"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:background="@drawable/border_grey_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/email_et"
+                    android:inputType="textEmailAddress"
+                    android:imeOptions="actionNext"
+                    android:layout_marginTop="10dp"
+                    android:padding="7dp"
+                    android:textColor="@color/black"
+                    android:hint="@string/email"
+                    android:background="@drawable/border_grey_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/address_et"
+                    android:layout_marginTop="10dp"
+                    android:padding="7dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPostalAddress"
+                    android:textColor="@color/black"
+                    android:hint="@string/address"
+                    android:background="@drawable/border_grey_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/city_et"
+                    android:layout_marginTop="10dp"
+                    android:padding="7dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:hint="@string/city"
+                    android:background="@drawable/border_grey_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/state_et"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:layout_marginTop="10dp"
+                    android:padding="7dp"
+                    android:textColor="@color/black"
+                    android:hint="@string/state"
+                    android:background="@drawable/border_grey_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/zipcode_et"
+                    android:layout_marginTop="10dp"
+                    android:padding="7dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:hint="@string/zipcode"
+                    android:background="@drawable/border_grey_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/phonenumber_et"
+                    android:layout_marginTop="10dp"
+                    android:padding="7dp"
+                    android:inputType="phone"
+                    android:imeOptions="actionNext"
+                    android:textColor="@color/black"
+                    android:hint="@string/phonenumber"
+                    android:background="@drawable/border_grey_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/message_et"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="10dp"
+                    android:padding="7dp"
+                    android:imeOptions="actionDone"
+                    android:gravity="start"
+                    android:textColor="@color/black"
+                    android:hint="@string/message"
+                    android:background="@drawable/border_grey_rec"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <TextView
+            android:id="@+id/submitbut"
+            android:padding="5dp"
+            android:gravity="center"
+            android:textSize="@dimen/large"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="@string/submit"
+            android:background="@color/toobarcolor"
+            android:layout_margin="15dp"
+            android:textAllCaps="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
